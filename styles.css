@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+  background: linear-gradient(180deg, #1c1f2a, #2f3650);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 40px 25px;
+  text-align: center;
+  width: 90%;
+  max-width: 360px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #f5c542;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 20px 0 10px;
+  color: #dcdcdc;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+button {
+  width: 100%;
+  background: #f5c542;
+  color: #1c1f2a;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ffdb5c;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(245, 197, 66, 0.4);
+}
+
+/* Loader animation */
+.loader {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #f5c542;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 25px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Result box styling */
+.hidden {
+  display: none;
+}
+
+.show {
+  animation: fadeIn 0.8s ease forwards;
+  margin-top: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+#resultBox h2 {
+  font-size: 1.2rem;
+  color: #f5c542;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+#resultBox p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.pass-text {
+  color: #32cd32;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-shadow: 0 0 6px rgba(50, 205, 50, 0.5);
+}
+
+.fail-text {
+  color: #ff4d4d;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-shadow: 0 0 6px rgba(255, 77, 77, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

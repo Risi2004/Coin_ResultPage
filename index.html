@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Result Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>THE COIN UNIVERSITY</h1>
+    <h3>Enter Register Number:</h3>
+    <input type="text" id="input" placeholder="e.g. IT24101071">
+    <button id="btn">Submit</button>
+
+    <!-- Loading Spinner -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Result Box -->
+    <div id="resultBox" class="hidden">
+      <h2>Module: <span id="moduleName"></span></h2>
+      <p>Result: <span id="resultStatus"></span></p>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
