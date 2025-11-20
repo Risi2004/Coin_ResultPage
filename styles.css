@@ -141,3 +141,14 @@ button:hover {
     transform: translateY(0);
   }
 }
+
+
+
+.container img {
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.container {
+  display: flex;
+}
