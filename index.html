@@ -10,24 +10,31 @@
 </head>
 
 <body>
-  <div class="container">
-    <img src="./Images/WhatsApp_Image_2025-11-17_at_12.17.19_336bf46b-removebg-preview.png" alt="image">
-    <div class="container2">
-      <h3>Enter Register Number:</h3>
-      <input type="text" id="input" >
-      <button id="btn">Submit</button>
+  <div class="page-wrapper">
+    <!-- Main Card -->
+    <div class="container">
+      <img src="./Images/WhatsApp_Image_2025-11-17_at_12.17.19_336bf46b-removebg-preview.png" alt="image">
+      <div class="container2">
+        <h3>Enter Register Number:</h3>
+        <input type="text" id="input" />
+        <button id="btn">Submit</button>
+      </div>
     </div>
 
-    <!-- Loading Spinner -->
-    <div id="loader" class="loader hidden"></div>
+    <!-- Loader + Result (Always below the main card) -->
+    <div class="feedback-area">
+      <!-- Loading Spinner -->
+      <div id="loader" class="loader hidden"></div>
 
-    <!-- Result Box -->
-    <div id="resultBox" class="hidden">
-      <h2>Module: <span id="moduleName"></span></h2>
-      <p>Result: <span id="resultStatus"></span></p>
+      <!-- Result Box -->
+      <div id="resultBox" class="result-box hidden">
+        <h2>Module: <span id="moduleName"></span></h2>
+        <p>Result: <span id="resultStatus"></span></p>
+      </div>
     </div>
   </div>
 
+  <!-- Your JS logic here -->
   <script src="./index.js"></script>
 </body>
 
