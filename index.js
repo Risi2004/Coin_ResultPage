@@ -24,7 +24,7 @@ btn.addEventListener('click', () => {
     resultBox.classList.remove('hidden');
     resultBox.classList.add('show');
 
-    if (regNo === 'IT24101071') {
+    if (regNo === 'BS24101071') {
       moduleName.textContent = 'Statistics';
       resultStatus.innerHTML = '<span class="pass-text">Pass ✅</span>';
     } else {
