@@ -24,12 +24,13 @@ btn.addEventListener('click', () => {
     resultBox.classList.remove('hidden');
     resultBox.classList.add('show');
 
-    if (regNo === 'BS24101071') {
+    if (regNo === 'BS24302071') {
       moduleName.textContent = 'Statistics';
-      resultStatus.innerHTML = '<span class="pass-text">Pass ✅</span>';
+      resultStatus.innerHTML = '<span class="pass-text">Pass </span>';
     } else {
       moduleName.textContent = 'Not Found';
-      resultStatus.innerHTML = '<span class="fail-text">Invalid Register Number ❌</span>';
+      resultStatus.innerHTML = '<span class="fail-text">Error</span>';
     }
   }, 10000); // 10 seconds
 });
+
