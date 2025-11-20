@@ -1,15 +1,25 @@
+/* Page background & centering */
 body {
   margin: 0;
   padding: 0;
   font-family: "Times New Roman", serif;
   background: linear-gradient(180deg, #1c1f2a, #2f3650);
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Wrapper so content stacks vertically (card on top, loader/result below) */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Main card */
 .container {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -20,24 +30,27 @@ body {
   max-width: 360px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;  /* Stack image and form vertically */
+  align-items: center;
 }
 
-h1 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #f5c542;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+/* Logo/Image */
+.container img {
+  width: 50%;
+  margin-bottom: 15px;
 }
 
-h3 {
+/* Text & input area */
+.container2 h3 {
   font-size: 1rem;
   font-weight: normal;
   margin: 20px 0 10px;
   color: #dcdcdc;
 }
 
-input {
+.container2 input {
   width: 90%;
   padding: 12px;
   border: none;
@@ -48,10 +61,10 @@ input {
   background: rgba(255, 255, 255, 0.9);
   color: #222;
   margin-bottom: 20px;
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-button {
+.container2 button {
   width: 100%;
   background: #f5c542;
   color: #1c1f2a;
@@ -65,10 +78,18 @@ button {
   transition: all 0.3s ease;
 }
 
-button:hover {
+.container2 button:hover {
   background: #ffdb5c;
   transform: scale(1.02);
   box-shadow: 0 4px 10px rgba(245, 197, 66, 0.4);
+}
+
+/* Area under the card (loader + result) */
+.feedback-area {
+  width: 90%;
+  max-width: 360px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* Loader animation */
@@ -78,7 +99,7 @@ button:hover {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  margin: 25px auto;
+  margin: 0 auto 10px auto;
   animation: spin 1s linear infinite;
 }
 
@@ -92,24 +113,24 @@ button:hover {
   display: none;
 }
 
-.show {
-  animation: fadeIn 0.8s ease forwards;
-  margin-top: 25px;
+.result-box {
   background: rgba(255, 255, 255, 0.15);
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  animation: fadeIn 0.8s ease forwards;
 }
 
-#resultBox h2 {
+.result-box h2 {
   font-size: 1.2rem;
   color: #f5c542;
   margin-bottom: 8px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-#resultBox p {
+.result-box p {
   font-size: 1.1rem;
   color: #fff;
   margin: 0;
@@ -117,6 +138,7 @@ button:hover {
   letter-spacing: 0.5px;
 }
 
+/* PASS / FAIL text styles */
 .pass-text {
   color: #32cd32;
   font-weight: 700;
@@ -142,13 +164,13 @@ button:hover {
   }
 }
 
+/* Small screens tweak (optional) */
+@media (max-width: 400px) {
+  .container {
+    padding: 30px 20px;
+  }
 
-
-.container img {
-  width: 50%;
-  margin-bottom: 15px;
-}
-
-.container {
-  display: flex;
+  .container img {
+    width: 60%;
+  }
 }
